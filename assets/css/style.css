@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* overflow-x:hidden ; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +15,7 @@ ul {
 }
 
 ul > * {
-  margin-right: 0.9375rem; /* 15px converted to rem */
+  margin-right: 0.9375rem;
 }
 
 a {
@@ -28,8 +30,8 @@ img {
 
 .navbar {
   display: flex;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* 2px and 5px converted to rem */
-  padding: 0.625rem 1.25rem; /* 20px converted to rem */
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+  padding: 0.625rem 1.25rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -42,15 +44,15 @@ img {
 .logo {
   width: 2rem;
   aspect-ratio: 1;
-  margin-right: 1.25rem; /* 20px converted to rem */
+  margin-right: 1.25rem;
 }
 
 .nav-icons {
-  margin-left: 0.625rem; /* 10px converted to rem */
+  margin-left: 0.625rem;
 }
 
 .nav-icons i:last-child {
-  margin-left: 0.9375rem; /* 15px converted to rem */
+  margin-left: 0.9375rem;
 }
 
 /* SMALLER NAV */
@@ -88,28 +90,29 @@ img {
 #hero {
   position: relative;
   width: 100%;
-  height: auto;
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-image-text {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  text-align: center;
+  top: 10%;
 }
 
 .hero-image-text h2 {
   font-weight: 400;
 }
 
-.hero-image-text h1{
-    font-size: 3rem;
+.hero-image-text h1 {
+  font-size: 3rem;
 }
 
-.hero-image-text p{
-    font-weight: lighter;
-    font-size: 1.5rem;
+.hero-image-text p {
+  font-weight: lighter;
+  font-size: 1.5rem;
 }
 
 /* SECTION DESIGN */
@@ -123,103 +126,285 @@ img {
   font-size: 2rem;
 }
 
-
-.design-section-grip-weight-data{
-    position: relative;
-    width: 100%;
-    height: auto;
+.design-section-grip-weight-data {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .design-section-weight-grip {
-    width: 100%;
-    position: absolute;
-    top: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  position: absolute;
 }
 
-.design-section-weight-grip h2{
-    font-weight: 400;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.design-section-weight-grip h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .small-line {
-    height: 0.125rem;         /* 2px */
-    width: 0.625rem;          /* 10px */
-    background-color: black;  /* Keeping color the same */
-    margin: 1.25rem auto;     /* 20px */
+  height: 0.125rem;
+  width: 0.625rem;
+  background-color: black;
+  margin: 1.25rem auto;
 }
 
-.design-section-weight-grip p{
-    word-wrap: break-word;      
-    overflow-wrap: break-word;  
-    width: 55%;                 
-    max-width: 100%;            
-    margin: auto;
+.design-section-weight-grip p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 55%;
+  max-width: 100%;
+  margin: auto;
 }
 
 .design-section-design-img {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .design-section-design-img img {
-    width: 100%;
-    height: 100%;
-    /* object-fit: contain; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .design-section-design-4-grid-layout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .upper-right-side {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: center;
-    justify-self: center;
-    max-width: 70%;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  max-width: 60%;
 }
 
 .down-left-side {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: center;
-    justify-self: center;
-    max-width: 70%;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  justify-self: end;
+  max-width: 60%;
 }
 
-.upper-right-side h3{
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2rem;
-    margin-bottom: 0.87rem;
+.upper-right-side h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 0.87rem;
 }
 
-.upper-right-side h5{
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+.upper-right-side h5,
+.down-left-side h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.upper-right-side :nth-child(4){
-    margin-top: 1.5rem;
+.upper-right-side :nth-child(4),
+.down-left-side :nth-child(3) {
+  margin-top: 1.5rem;
+}
+
+/* COMPLEX PART OF MY PROJECT */
+
+.design-section-hover-images {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+}
+.design-section-hover-images img {
+  height: 100%;
+  object-fit: cover;
+  width: 40%;
+  transition: all 1s ease;
+}
+.design-section-hover-images img:first-child {
+  width: 100%;
+}
+.design-section-hover-images img:hover {
+  width: 100%;
+}
+.design-section-hover-images:hover img {
+  width: 40%;
+}
+.design-section-hover-images:hover img:hover {
+  width: 100%;
+}
+
+/* SPECS SECTION */
+
+.specs-section-screen-color {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specs-section-screen-color img {
+  width: 100%;
+  height: auto;
+  max-width: 85%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.specs-section-screen-color-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.specs-section-screen-colors-top {
+  position: relative;
+  bottom: 2rem;
+}
+
+.specs-section-screen-colors-top h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.specs-section-screen-color-bottom {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -3rem;
+}
+
+.card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.875rem;
+  font-weight: 500;
+}
+
+.card {
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  padding: 1rem;
+}
+
+.specs-section-screen-color-bottom :nth-child(2) {
+  margin: auto 4rem;
+}
+
+.specs-section-detail-screen {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specs-section-detail-screen img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.specs-section-detail-screen-text {
+  display: grid;
+  height: 80%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 40%;
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.specs-screen-first-part {
+  grid-column: span 2;
+  padding-right: 3rem;
+}
+
+.specs-screen-first-part h2 {
+  font-size: 3rem;
+}
+
+.grid-box {
+  display: contents;
+}
+
+.align {
+  align-self: center;
+}
+
+.box2 {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+.align h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.specs-section-white-div {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3.3rem;
+  font-size: 2rem;
+}
+
+.specs-section-see-specs {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specs-section-see-specs img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.specs-section-see-specs h2 {
+  position: absolute;
+  z-index: 2;
+  left: 15%;
+  font-size: 2.5rem;
 }
