@@ -98,7 +98,7 @@ Date limite de soumission : 18/10/2024 18:00.
 
 | Device Type | Size             | Width in `em` |
 | ----------- | ---------------- | ------------- |
-| **Mobile**  | Max Width: 480px | 30em          |
-| **Tablet**  | Min Width: 481px | 30.06em       |
-|             | Max Width: 768px | 48em          |
-| **Desktop** | Min Width: 769px | 48.06em       |
+| **Mobile**  | Max Width: 759px | 47.44em          |
+| **Tablet**  | Min Width: 760px | 47.5em       |
+|             | Max Width: 1000px | 62.5em          |
+| **Desktop** | Min Width: 1001px | 62.56em       |

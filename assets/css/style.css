@@ -495,11 +495,15 @@ footer {
   color: #ff6900;
 }
 
+.visible{
+  display: none;
+}
+
 /***************** MEDIA QUERIES *****************/
 
 /* TABLET SIZE */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 :root {
   --font-size-base: 0.9rem;
   --font-size-small: 0.8rem;
@@ -598,30 +602,4 @@ footer {
   font-size: var(--font-size-base);
   line-height: normal;
 }
-}
-
-@media (max-width: 480px) {
-  /* Add your styles for mobile devices here */
-
-
-  /* THREE IMAGES */
-  .design-section-hover-images {
-    flex-direction: row;
-    height: auto;
-  }
-
-  .design-section-hover-images img {
-    flex: 1 1 auto;
-    width: 100%;
-    
-  }
-
-  .design-section-hover-images img:first-child,
-  .design-section-hover-images img:hover,
-  .design-section-hover-images:hover img,
-  .design-section-hover-images:hover img:hover {
-    flex-basis: auto;
-  }
-
-
 }
