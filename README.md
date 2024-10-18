@@ -2,7 +2,7 @@
 
 **Finalisation d'une Maquette et Intégration HTML/CSS**
 
-**Author:** Iliass RAIHANI
+**Author du Brief:** Iliass RAIHANI
 
 ## Links
 
